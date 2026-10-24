@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ShaderAmbient demo</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #05090b; overflow: hidden; }
+  body { font-family: "Cascadia Code", Consolas, monospace; color: #d7ecee; }
+  canvas { position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; }
+  .content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 18px; }
+  h1 { letter-spacing: 0.35em; font-weight: 700; font-size: 34px; text-shadow: 0 0 12px rgba(102,217,224,0.55); margin: 0; }
+  p { color: #5c757a; letter-spacing: 0.12em; font-size: 13px; max-width: 560px; line-height: 1.7; margin: 0; }
+  .btns { display: flex; gap: 14px; margin-top: 8px; }
+  button { background: rgba(102,217,224,0.08); color: #66d9e0; border: 1px solid rgba(102,217,224,0.5); padding: 10px 22px; font: inherit; letter-spacing: 0.25em; font-size: 11px; cursor: pointer; }
+  button:hover { background: rgba(102,217,224,0.18); }
+  .tag { position: fixed; right: 16px; top: 14px; z-index: 1; font-size: 10px; letter-spacing: 0.3em; color: #46585c; }
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="tag">SHADERAMBIENT · LIVE CANVAS</div>
+<div class="content">
+  <h1>SHADER AMBIENT</h1>
+  <p>Flickering grid · mouse-follow ripple field · floating particles —<br />one raw fragment shader, zero dependencies. Move your mouse.</p>
+  <div class="btns">
+    <button id="fx">◈ FX ON</button>
+  </div>
+</div>
+<script type="module">
+  import { createShaderAmbience } from "./core.js";
+  const handle = createShaderAmbience(document.getElementById("bg"), {
+    color: "#66d9e0",
+    intensity: 0.05,
+  });
+  const btn = document.getElementById("fx");
+  let on = true;
+  btn.addEventListener("click", () => {
+    on = !on;
+    handle?.setEnabled(on);
+    btn.textContent = on ? "◈ FX ON" : "◈ FX OFF";
+  });
+</script>
+</body>
+</html>
