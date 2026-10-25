@@ -13,6 +13,8 @@
 
 ---
 
+> ▶ **Live site: [www.hackerenglish.com](https://www.hackerenglish.com)** — its ambient background is this shader running in production.
+
 Ambient backgrounds for dark, techy landing pages are usually three.js demos:
 heavy, opinionated, and without a plan for laptops that can't keep up.
 ShaderAmbient is one raw fragment shader (~330 lines, zero dependencies) with
@@ -106,8 +108,6 @@ your own fallback (a plain CSS gradient works well).
 Extracted from the HackerEnglish project, which adapted the shader from a
 Bitget builder-section demo and added the performance guards. See
 [`docs/PORTING.md`](./docs/PORTING.md).
-
-The ambient background of [www.hackerenglish.com](https://www.hackerenglish.com) is this shader running in production.
 
 ## License
 

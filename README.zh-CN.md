@@ -13,6 +13,8 @@
 
 ---
 
+> ▶ **在线演示：[www.hackerenglish.com](https://www.hackerenglish.com)** —— 站点的氛围背景正是本 shader 的生产环境运行效果。
+
 暗色科技风落地页的"氛围背景"通常是 three.js demo：重、固执己见，而且没考虑带不动的笔记本。ShaderAmbient 是一个原始片元着色器（约 330 行、零依赖），并且**把无聊但重要的部分做对了**：
 <div align="center">
   <img src="docs/media/demo.png" alt="ShaderAmbient 实时演示" width="820" />
@@ -100,8 +102,6 @@ WebGL 不可用或着色器编译失败时返回 `null`——降级方案由你�
 ## 来源
 
 抽取自 HackerEnglish 项目——着色器原型改编自 Bitget builder-section demo，性能保护由 HackerEnglish 补齐。见 [`docs/PORTING.md`](./docs/PORTING.md)。
-
-[www.hackerenglish.com](https://www.hackerenglish.com) 的动态背景正是本库在生产环境的运行效果。
 
 ## 许可
 
