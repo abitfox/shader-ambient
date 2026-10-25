@@ -101,6 +101,8 @@ WebGL 不可用或着色器编译失败时返回 `null`——降级方案由你�
 
 抽取自 HackerEnglish 项目——着色器原型改编自 Bitget builder-section demo，性能保护由 HackerEnglish 补齐。见 [`docs/PORTING.md`](./docs/PORTING.md)。
 
+[www.hackerenglish.com](https://www.hackerenglish.com) 的动态背景正是本库在生产环境的运行效果。
+
 ## 许可
 
 [MIT](./LICENSE)。

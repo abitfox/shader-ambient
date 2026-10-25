@@ -107,6 +107,8 @@ Extracted from the HackerEnglish project, which adapted the shader from a
 Bitget builder-section demo and added the performance guards. See
 [`docs/PORTING.md`](./docs/PORTING.md).
 
+The ambient background of [www.hackerenglish.com](https://www.hackerenglish.com) is this shader running in production.
+
 ## License
 
 [MIT](./LICENSE).
